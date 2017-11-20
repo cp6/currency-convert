@@ -5,7 +5,6 @@ function usdtoaud($usd) {
     $json = json_decode($data);
     $aud = $json->rates->AUD;
     $result = $usd * $aud;
-    echo $result;
     return $result;
 }
 function usdtoeuro($usd) {
@@ -13,7 +12,6 @@ function usdtoeuro($usd) {
     $json = json_decode($data);
     $eur = $json->rates->EUR;
     $result = $usd * $eur;
-    echo $result;
     return $result;
 }
 function usdtocad($usd) {
@@ -21,7 +19,6 @@ function usdtocad($usd) {
     $json = json_decode($data);
     $cad = $json->rates->CAD;
     $result = $usd * $cad;
-    echo $result;
     return $result;
 }
 function usdtonzd($usd) {
@@ -29,7 +26,6 @@ function usdtonzd($usd) {
     $json = json_decode($data);
     $nzd = $json->rates->NZD;
     $result = $usd * $nzd;
-    echo $result;
     return $result;
 }
 function usdtogbp($usd) {
@@ -37,7 +33,6 @@ function usdtogbp($usd) {
     $json = json_decode($data);
     $gbp = $json->rates->GBP;
     $result = $usd * $gbp;
-    echo $result;
     return $result;
 }
 //EURO to
@@ -46,7 +41,6 @@ function eurtoaud($eur) {
     $json = json_decode($data);
     $aud = $json->rates->AUD;
     $result = $eur * $aud;
-    echo $result;
     return $result;
 }
 function eurtousd($eur) {
@@ -54,7 +48,6 @@ function eurtousd($eur) {
     $json = json_decode($data);
     $usd = $json->rates->USD;
     $result = $eur * $usd;
-    echo $result;
     return $result;
 }
 function eurtocad($eur) {
@@ -62,7 +55,6 @@ function eurtocad($eur) {
     $json = json_decode($data);
     $cad = $json->rates->CAD;
     $result = $eur * $cad;
-    echo $result;
     return $result;
 }
 function eurtonzd($eur) {
@@ -70,7 +62,6 @@ function eurtonzd($eur) {
     $json = json_decode($data);
     $nzd = $json->rates->NZD;
     $result = $eur * $nzd;
-    echo $result;
     return $result;
 }
 function eurtogbp($eur) {
@@ -78,7 +69,6 @@ function eurtogbp($eur) {
     $json = json_decode($data);
     $gbp = $json->rates->GBP;
     $result = $eur * $gbp;
-    echo $result;
     return $result;
 }
 //AUD to
@@ -87,7 +77,6 @@ function audtousd($aud) {
     $json = json_decode($data);
     $usd = $json->rates->USD;
     $result = $aud * $usd;
-    echo $result;
     return $result;
 }
 function audtoeur($aud) {
@@ -95,7 +84,6 @@ function audtoeur($aud) {
     $json = json_decode($data);
     $eur = $json->rates->EUR;
     $result = $aud * $eur;
-    echo $result;
     return $result;
 }
 function audtocad($aud) {
@@ -103,7 +91,6 @@ function audtocad($aud) {
     $json = json_decode($data);
     $cad = $json->rates->CAD;
     $result = $aud * $cad;
-    echo $result;
     return $result;
 }
 function audtonzd($aud) {
@@ -111,7 +98,6 @@ function audtonzd($aud) {
     $json = json_decode($data);
     $nzd = $json->rates->NZD;
     $result = $aud * $nzd;
-    echo $result;
     return $result;
 }
 function audtogbp($aud) {
@@ -119,7 +105,6 @@ function audtogbp($aud) {
     $json = json_decode($data);
     $gbp = $json->rates->GBP;
     $result = $aud * $gbp;
-    echo $result;
     return $result;
 }
 ?>
