@@ -1,11 +1,11 @@
 <?php
 
-function APIcall($base)
+function APIcall(string $base): mixed
 {
     return json_decode(file_get_contents("https://api.exchangeratesapi.io/latest?base=$base"));
 }
 
-function currencyConvert($amount, $from, $to, $format = false, $decimals = 2)
+function currencyConvert(float $amount, string $from, string $to, $format = false, $decimals = 2): ?float
 {
     if ($from === 'USD') {
         $data = APIcall('USD');
@@ -22,11 +22,13 @@ function currencyConvert($amount, $from, $to, $format = false, $decimals = 2)
     } elseif ($from === 'CNY') {
         $data = APIcall('CNY');
     } else {
-        return "from/to must can only be: USD|EUR|CAD|AUD|GBP|JPY|CNY";
+        //from/to can only be: USD|EUR|CAD|AUD|GBP|JPY|CNY
+        return null;
     }
+
     if ($format) {
-        return number_format(($amount * $data->rates->$to), $decimals);
-    } else {
-        return ($amount * $data->rates->$to);
+        return (float)number_format(($amount * $data->rates->$to), $decimals);
     }
+
+    return $amount * $data->rates->$to;
 }
